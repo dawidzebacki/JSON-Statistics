@@ -29,7 +29,7 @@
     <div class="item">Most popular cities: <input id="cities_input"></input>
       <div>
         <button onclick="calculatePopularItems(popularCities, 'cities_input', 'popular_cities')">Check</button>
-        <button onclick="clearText('popular_cities', 'cities_input')">Clear</button></div><br /><span class="answer"
+        <button onclick="clearText('popular_cities', 'cities_input')">Clear</button></div><span class="answer"
         id="popular_cities"></span>
     </div>
 
@@ -37,7 +37,7 @@
       <div>
         <button onclick="calculatePopularItems(popularPasswords, 'passwords_input', 'popular_passwords')">Check</button>
         <button onclick="clearText('popular_passwords', 'passwords_input')">Clear</button>
-      </div><br /><span class="answer" id="popular_passwords"></span>
+      </div><span class="answer" id="popular_passwords"></span>
     </div>
 
     <div class="item">Best password<span class="answer" id="strong_password"></span></div>
@@ -45,7 +45,7 @@
     <div class="item">Users who are born between (YYYY-MM-DD)<input id="born_1"></input> <input id="born_2"></input>
       <div>
         <button onclick="calculateBornUsers('born_1', 'born_2', 'born_users')">Check</button>
-        <button onclick="clearText('born_users', 'born_1', 'born_2')">Clear</button></div><br />
+        <button onclick="clearText('born_users', 'born_1', 'born_2')">Clear</button></div>
       <span class="answer" id="born_users"></span>
     </div>
   </div>
