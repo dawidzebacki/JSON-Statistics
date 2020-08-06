@@ -1,5 +1,7 @@
 # JSON-Statistics
 
+LIVE DEMO: https://json-statistics-dawidzebacki.netlify.app
+
 After fetching JSON file:
 
 creating new field with number of days to next birthday.  
