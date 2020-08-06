@@ -67,6 +67,8 @@ async function getJson() {
 
     calculateAverages();
 
+    calculatePopularItems(strongPasswords, false , 'strong_password', true )
+
     document.getElementById('women_percent').innerHTML = averages.femalePercent;
     document.getElementById('men_percent').innerHTML = averages.malePercent;
     document.getElementById('average_age_general').innerHTML = averages.general;
@@ -106,10 +108,10 @@ const calculateAverages = () => {
 
 }
 
-const calculatePopularItems = (popularObject, inputValue, text) => {
+const calculatePopularItems = (popularObject, inputValue, text, isStrongPassword) => {
 
     const arr = [];
-    const howMany = document.getElementById(inputValue).value;
+    const howMany = inputValue ? document.getElementById(inputValue).value : undefined;
 
     for (const item in popularObject) {
         arr.push([item, popularObject[item]]);
@@ -117,7 +119,13 @@ const calculatePopularItems = (popularObject, inputValue, text) => {
 
     arr.sort()
     arr.sort((a, b) => b[1] - a[1]);
-    document.getElementById(text).innerHTML = arr.map(element => element[0]).slice(0, howMany).join(', ');
+
+    if (isStrongPassword) {
+        document.getElementById(text).innerHTML = arr[0][0];
+    } else {
+        document.getElementById(text).innerHTML = arr.map(element => `${element[0]} - ${element[1]}`).slice(0, howMany).join(', ');
+    }
+    
 
 }
 

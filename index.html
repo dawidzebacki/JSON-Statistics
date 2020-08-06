@@ -19,12 +19,12 @@
       <p>All items are in alphabetical order.</p>
     </div>
 
-    <div class="item">Men percent: <span id="men_percent"></span></div>
-    <div class="item">Women percent: <span id="women_percent"></span></div>
+    <div class="item">Men percent: <span class="answer" id="men_percent"></span></div>
+    <div class="item">Women percent: <span class="answer" id="women_percent"></span></div>
 
-    <div class="item">Average age general: <span id="average_age_general"></span></div>
-    <div class="item">Average age of men: <span id="average_age_men"></span></div>
-    <div class="item">Average age of women: <span id="average_age_women"></span></div>
+    <div class="item">Average age general: <span class="answer" id="average_age_general"></span></div>
+    <div class="item">Average age of men: <span class="answer" id="average_age_men"></span></div>
+    <div class="item">Average age of women: <span class="answer" id="average_age_women"></span></div>
 
     <div class="item">Most popular cities: <input id="cities_input"></input>
       <div>
@@ -40,13 +40,7 @@
       </div><br /><span class="answer" id="popular_passwords"></span>
     </div>
 
-    <div class="item">Best passwords: <input id="strong_passwords_input"></input>
-      <div>
-        <button onclick="calculatePopularItems(strongPasswords, 'strong_passwords_input' , 'strong_passwords' )">
-          Check</button>
-        <button onclick="clearText('strong_passwords', 'strong_passwords_input')">Clear</button>
-      </div><br /><span class="answer" id="strong_passwords"></span>
-    </div>
+    <div class="item">Best password<span class="answer" id="strong_password"></span></div>
 
     <div class="item">Users who are born between (YYYY-MM-DD)<input id="born_1"></input> <input id="born_2"></input>
       <div>
